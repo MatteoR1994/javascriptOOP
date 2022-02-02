@@ -57,7 +57,7 @@ class Teacher {
             }
         }
 
-        this.students.reduce((p, c) => );        
+        this.students.reduce((p, c) =>        this.students[i].calculateMean() >= p.calculateMean() ? ()                  );        
 
         return "Lo studente migliore di " + this.surname + " è:\n\n" + biggerMeanStudent.toString();
     }
