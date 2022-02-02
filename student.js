@@ -20,7 +20,8 @@ class Student {
         }
         let sum = this.grades.reduce((p, c) => p + c);
         let mean = sum / this.grades.length;
-        return mean;
+        //return mean;
+        return Math.round((mean + Number.EPSILON) * 100) / 100; // Arrotonda la media a 2 decimali
     } // Quando mi servono i dati dello studente metto "this"
 
     generateCode() {
