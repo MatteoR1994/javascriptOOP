@@ -44,3 +44,24 @@ class Student {
     }
 
 }
+
+// Creare una classe Teacher:
+
+//  ° Proprietà fondamentali
+//  - name
+//  - surnem
+//  - age
+//  - gender
+//  - degree
+
+//  ° Proprietà non fondamentali
+//  - students (array, inizialmente vuoto)
+
+//  ° Metodi:
+//  - toString()
+//      - Stampi prima i dati dell'insegnante
+//      - Sotto il nome dell'insegnante metta tutte le schede dei suoi studenti
+//  - addStudents(studente)
+//      - Se lo studente non è già tra i suoi studenti allora lo aggiunge (per ora due studenti sono uguali se hanno studentCode uguale)
+//  - addGrade(studentCode, grade) => assegna il grade a quello studente
+//  - bestStudent() => deve restituire il toString() dello studente con la media più alta
