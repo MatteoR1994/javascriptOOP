@@ -41,7 +41,7 @@ class Teacher {
 
     bestStudent() { // Se due studenti hanno media uguale, prendiamo quello con età minore. dopo, con reduce
         let biggerMeanStudent = this.students[0];
-        let biggerMean = this.students[0].calculateMean();
+        let biggerMean = biggerMeanStudent.calculateMean();
         for (let i = 1; i < this.students.length; i++) {
             const element = this.students[i];
             if (this.students[i].calculateMean() >= biggerMean) {
@@ -57,7 +57,7 @@ class Teacher {
             }
         }
 
-        this.students.reduce((p, c) =>        this.students[i].calculateMean() >= p.calculateMean() ? ()                  );        
+        //this.students.reduce((p, c) =>        this.students[i].calculateMean() >= p.calculateMean() ? ()                  );        
 
         return "Lo studente migliore di " + this.surname + " è:\n\n" + biggerMeanStudent.toString();
     }
