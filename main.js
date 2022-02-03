@@ -1,17 +1,15 @@
 // Creo un pò di studenti
 
-let student1 = new Student("pippo", "de paolis", 2013, "m"); // pide2009
-let student2 = new Student("paperino", "duck", 2013, "m"); // padu2009
-let student3 = new Student("topolino", "mouse", 2012, "m"); // tomo2010
+let student1 = new Student("pippo", "de paolis", 13, "m"); // pide2009
+let student2 = new Student("paperino", "duck", 13, "m"); // padu2009
+let student3 = new Student("topolino", "mouse", 12, "m"); // tomo2010
 
-let student4 = new Student("minnie", "mouse", 2015, "f"); // mimo2007
-let student5 = new Student("paperina", "ducker", 2014, "f"); // padu2008
+let student4 = new Student("minnie", "mouse", 15, "f"); // mimo2007
+let student5 = new Student("paperina", "ducker", 14, "f"); // padu2008
 
-let student6 = new Student("franco", "rossi", 2015, "m"); // frro2007
+let student6 = new Student("franco", "rossi", 15, "m"); // frro2007
 
-console.log(student1.grade);
-
-console.log(student1.yob);
+console.log("Nome studente 1: ", student1.name);
 
 /****/
 
@@ -20,11 +18,15 @@ console.log(student1.yob);
 let teacher1 = new Teacher("paperone", "duck", 80, "m", "terza media");
 let teacher2 = new Teacher("clarabella", "bella", 40, "f", "prima superiore");
 
+console.log("Codice docente 1: ", teacher1.generateCode());
+
 /****/
 
 // Creo il preside
 
 let principal = new Principal("Roberto", "Vecchi", 65, "m", "FED High School");
+
+console.log("Codice preside: ", principal.generateCode());
 
 /****/
 

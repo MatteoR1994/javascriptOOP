@@ -1,10 +1,11 @@
-class Principal {
+class Principal extends Person {
 
     constructor(name, surname, age, gender, school) {
-        this.name = name;
-        this.surname = surname;
-        this.age = age;
-        this.gender = gender;
+        // this.name = name;
+        // this.surname = surname;
+        // this.age = age;
+        // this.gender = gender;
+        super(name, surname, age, gender);
         this.school = school;
         this.teachers = [];
     }
@@ -61,6 +62,16 @@ class Principal {
 
     compareMeansForTeacher(val1, val2) {
         return val2.mean - val1.mean;
+    }
+
+    generateCode() {
+        // let now = new Date();
+        // let actualYear = now.getFullYear();
+        // let birthYear = actualYear - this.age;
+        // let code = this.name[0] + this.name[1] + this.surname[0] + this.surname[1] + birthYear + this.gender + this.school[0];
+        // return code;
+        const code = super.generateCode() + this.school[0];
+        return code;
     }
 
     toString() {
