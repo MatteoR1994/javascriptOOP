@@ -63,7 +63,7 @@ class Principal {
             principalDescription += "\n-----------------\nL'insegnate, al momento, non ha docenti assegnati."
         } else {
             for (let i = 0; i < this.teachers.length; i++) {
-                let teacherDescription = "\n-----------------\nDOCENTE " + (i + 1) + "\n" + this.teachers[i].toString();
+                let teacherDescription = "\n-------------------------------------------------------\nDOCENTE " + (i + 1) + "\n" + this.teachers[i].toString();
                 principalDescription += teacherDescription;
             }
         }

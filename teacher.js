@@ -64,13 +64,14 @@ class Teacher {
                                + "Nome: " + this.name + "\n"
                                + "Cognome: " + this.surname + "\n"
                                + "Età: " + this.age + "\n"
-                               + "Grado: " + this.degree + "\n";
+                               + "Grado: " + this.degree + "\n"
+                               + "Alunni:";
 
         if (this.students.length === 0) {
             teacherDescription += "\n-----------------\nL'insegnate, al momento, non ha studenti assegnati."
         } else {
             for (let i = 0; i < this.students.length; i++) {
-                let studentDescription = "\n-----------------\nSTUDENTE " + (i + 1) + "\n" + this.students[i].toString();
+                let studentDescription = "\n**********************************\nSTUDENTE " + (i + 1) + "\n" + this.students[i].toString();
                 teacherDescription += studentDescription;
             }
         }
