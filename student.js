@@ -1,25 +1,44 @@
 class Student {
     
-    constructor(name, surname, age, gender) { // Nel costruttore vado ad inserire tutte le proprietà che ritengo fondamentali quando creo un nuovo studente
+    constructor(name, surname, yob, gender) { // Nel costruttore vado ad inserire tutte le proprietà che ritengo fondamentali quando creo un nuovo studente
         this.name = name; // this è lo studente, proprio lui, quando viene creato
         this.surname = surname;
-        this.age = age;
-        this.gender = gender;
-        this.grades = []; // Quando non ho ancora una proprietà posso dichiarne la scatola come vuota e riempirla dopo.
+        this.yob = yob;
+        this._gender = gender;
+        this._grades = []; // Quando non ho ancora una proprietà posso dichiarne la scatola come vuota e riempirla dopo.
     }
 
-    addGrade(grade) {
-        if (grade >= 0 && grade <= 10) {
-            this.grades.push(grade);
+    set grade(value) {
+        if (value >= 0 && value <= 10) {
+            this._grades.push(value);
         }
+    }
+
+    get grade() {
+        return this.calculateMean();
+    }
+
+    get gender() {
+        return this._gender;
+    }
+
+    get age() { // Questa è una proprietà nuova, perché non è presente nel constructor dello studente, che viene creata a runtime
+        let now = new Date();
+        let age = now.getFullYear() - this.yob;
+        return age;
+    }
+
+    set age(value) {
+        let now = new Date();
+        this.yob = now.getFullYear() - value;
     }
 
     calculateMean() { // In una classe per definire i metodi (o funzioni) non serve mettere "function" all'inizio. Perché un metodo è visto come una proprietà dello studente
-        if (this.grades.length === 0) {
+        if (this._grades.length === 0) {
             return -1;
         }
-        let sum = this.grades.reduce((p, c) => p + c);
-        let mean = sum / this.grades.length;
+        let sum = this._grades.reduce((p, c) => p + c);
+        let mean = sum / this._grades.length;
         //return mean;
         return Math.round((mean + Number.EPSILON) * 100) / 100; // Arrotonda la media a 2 decimali
     } // Quando mi servono i dati dello studente metto "this"

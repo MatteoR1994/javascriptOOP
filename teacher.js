@@ -34,7 +34,7 @@ class Teacher {
     addStudentGrade(studentCode, grade) {
         for (const student of this.students) {
             if(studentCode === student.generateCode()) {
-                student.addGrade(grade);
+                student.grade = grade;
             }
         }
     }

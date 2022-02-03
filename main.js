@@ -1,13 +1,17 @@
 // Creo un pò di studenti
 
-let student1 = new Student("pippo", "de paolis", 13, "m"); // pide2009
-let student2 = new Student("paperino", "duck", 13, "m"); // padu2009
-let student3 = new Student("topolino", "mouse", 12, "m"); // tomo2010
+let student1 = new Student("pippo", "de paolis", 2013, "m"); // pide2009
+let student2 = new Student("paperino", "duck", 2013, "m"); // padu2009
+let student3 = new Student("topolino", "mouse", 2012, "m"); // tomo2010
 
-let student4 = new Student("minnie", "mouse", 15, "f"); // mimo2007
-let student5 = new Student("paperina", "ducker", 14, "f"); // padu2008
+let student4 = new Student("minnie", "mouse", 2015, "f"); // mimo2007
+let student5 = new Student("paperina", "ducker", 2014, "f"); // padu2008
 
-let student6 = new Student("franco", "rossi", 15, "m"); // frro2007
+let student6 = new Student("franco", "rossi", 2015, "m"); // frro2007
+
+console.log(student1.grade);
+
+console.log(student1.yob);
 
 /****/
 
@@ -26,32 +30,32 @@ let principal = new Principal("Roberto", "Vecchi", 65, "m", "FED High School");
 
 // Assegno un pò di voti agli studenti
 
-student1.addGrade(7);
-student1.addGrade(9);
-student1.addGrade(10);
-student1.addGrade(3);
-student1.addGrade(2.5);
+student1.grade = 7;
+student1.grade = 9;
+student1.grade = 10;
+student1.grade = 3;
+student1.grade = 2.5;
 
-student2.addGrade(7);
-student2.addGrade(9);
-student2.addGrade(10);
-student2.addGrade(3);
-student2.addGrade(2.5);
+student2.grade = 7;
+student2.grade = 9;
+student2.grade = 10;
+student2.grade = 3;
+student2.grade = 2.5;
 
-student3.addGrade(7);
-student3.addGrade(9);
-student3.addGrade(10);
+student3.grade = 7;
+student3.grade = 9;
+student3.grade = 10;
 
-student4.addGrade(7);
-student4.addGrade(9);
-student4.addGrade(10);
+student4.grade = 7;
+student4.grade = 9;
+student4.grade = 10;
 
-student5.addGrade(7);
-student5.addGrade(9);
-student5.addGrade(10);
-student5.addGrade(7);
+student5.grade = 7;
+student5.grade = 9;
+student5.grade = 10;
+student5.grade = 7;
 
-student6.addGrade(7);
+student6.grade = 7;
 
 /****/
 
